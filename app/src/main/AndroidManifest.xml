@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bignerdranch.android.parkinsons">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/main_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoadingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TouchTestActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TouchResultActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ShakeTestActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ShakeResultActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".HowtoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BrainTestActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BrainResultActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

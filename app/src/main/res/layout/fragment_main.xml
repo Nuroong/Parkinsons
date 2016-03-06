@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/TestBtn1"
+            android:src="@drawable/brain_icon"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="default"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:id="@+id/TestText1"
+            android:layout_below="@+id/TestBtn1"
+            android:layout_alignLeft="@+id/TestBtn1"
+            android:layout_gravity="center_vertical" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/TestBtn2"
+            android:src="@drawable/howto_icon"
+            android:scaleType="centerInside"
+            android:clickable="true"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="default"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:id="@+id/TestText2"
+            android:layout_below="@+id/TestBtn2"
+            android:layout_alignLeft="@+id/TestBtn2"
+            android:layout_gravity="center_vertical"/>
+    </RelativeLayout>
+
+</LinearLayout>

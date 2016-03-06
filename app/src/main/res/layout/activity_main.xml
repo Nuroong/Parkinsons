@@ -16,105 +16,22 @@
         android:layout_height="wrap_content"
         android:text="검사를 선택하세요"
         android:textSize="40dp"
-        android:layout_gravity="center"/>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="48dp">
+        android:layout_margin="16dp" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/BtntestBtn"
-            android:src="@drawable/hand_touch_icon"
-            android:layout_gravity="center_vertical"
-            android:background="@null"
-            android:layout_margin="16dp" />
+    <fragment
+        class="layout.MainFragment"
+        android:id="@+id/fragment_space1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="누르기  검사"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            android:layout_below="@+id/BtntestBtn"
-            android:layout_alignLeft="@+id/BtntestBtn"
-            android:id="@+id/Btntest_text" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ShaketestBtn"
-            android:src="@drawable/hand_shake_icon"
-            android:clickable="true"
-            android:layout_gravity="center_vertical"
-            android:layout_toRightOf="@+id/BtntestBtn"
-            android:background="@null"
-            android:layout_margin="16dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="손떨림  검사"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            android:layout_below="@+id/ShaketestBtn"
-            android:layout_alignLeft="@+id/ShaketestBtn"
-            android:id="@+id/shake_text" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_gravity="center">
-
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:id="@+id/BrainBtn"
-            android:src="@drawable/brain_icon"
-            android:clickable="true"
-            android:scaleType="centerInside"
-            android:layout_gravity="center_vertical"
-            android:background="@null"
-            android:layout_margin="16dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="인지력  검사"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            android:layout_below="@+id/BrainBtn"
-            android:layout_alignLeft="@+id/BrainBtn"
-            android:id="@+id/brain_text"/>
-
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:id="@+id/HowtoBtn"
-            android:src="@drawable/howto_icon"
-            android:scaleType="centerInside"
-            android:clickable="true"
-            android:layout_gravity="center_vertical"
-            android:background="@null"
-            android:layout_toRightOf="@+id/BrainBtn"
-            android:layout_margin="16dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="진단법  안내"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            android:layout_below="@+id/HowtoBtn"
-            android:layout_alignLeft="@id/HowtoBtn"
-            android:id="@+id/howto_text"/>
-
-    </RelativeLayout>
-
+    <fragment
+        class="layout.MainFragment"
+        android:id="@+id/fragment_space2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1" />
 </LinearLayout>

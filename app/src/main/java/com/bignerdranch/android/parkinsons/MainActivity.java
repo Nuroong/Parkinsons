@@ -1,59 +1,37 @@
 package com.bignerdranch.android.parkinsons;
 
-
 import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
+import android.util.Log;
+
+import layout.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String DIALOG_AGE = "age";
+    private static final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        startActivity(new Intent(this, LoadingActivity.class));
+        startActivity(new Intent(this, LoadingActivity.class)); //splash
+
+        FragmentManager fm = getFragmentManager();
+
+        MainFragment mainFragment1 = MainFragment.newInstance(0);
+
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_space1, mainFragment1);
+        Log.i(TAG, "Fragment1 replaced");
+
+        MainFragment mainFragment2 = MainFragment.newInstance(1);
+
+        fragmentTransaction.replace(R.id.fragment_space2, mainFragment2);
+        Log.i(TAG, "Fragment2 replaced");
+        fragmentTransaction.commit();
+        Log.i(TAG, "Fragment transaction committed");
 
         setContentView(R.layout.activity_main);
-
-        ImageButton startBtn = (ImageButton) findViewById(R.id.BtntestBtn);
-        startBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fm = getFragmentManager();
-                AgeDialogFragment mAgeDialog = AgeDialogFragment.newInstance(0);
-                mAgeDialog.show(fm, DIALOG_AGE);
-            }
-        });
-
-        ImageButton shakeBtn = (ImageButton) findViewById(R.id.ShaketestBtn);
-        shakeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fm = getFragmentManager();
-                AgeDialogFragment mAgeDialog = AgeDialogFragment.newInstance(1);
-                mAgeDialog.show(fm, DIALOG_AGE);
-            }
-        });
-
-        ImageButton brainBtn = (ImageButton) findViewById(R.id.BrainBtn);
-        brainBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fm = getFragmentManager();
-                AgeDialogFragment mAgeDialog = AgeDialogFragment.newInstance(2);
-                mAgeDialog.show(fm, DIALOG_AGE);
-            }
-        });
-
-        ImageButton infoBtn = (ImageButton) findViewById(R.id.HowtoBtn);
-        infoBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplication(), HowtoActivity.class));
-            }
-        });
     }
 }
